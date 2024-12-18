@@ -1,0 +1,120 @@
+openapi: 3.0.0
+info:
+  title: API de Itens
+  description: API para gerenciar uma lista de itens.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000/api
+
+paths:
+  /items:
+    get:
+      summary: Listar todos os itens
+      responses:
+        '200':
+          description: Lista de itens
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+
+    post:
+      summary: Criar um novo item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Item'
+      responses:
+        '201':
+          description: Item criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+
+  /items/{id}:
+    get:
+      summary: Obter um item específico
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID do item a ser retornado
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Item encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+        '404':
+          description: Item não encontrado
+
+    put:
+      summary: Atualizar um item existente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID do item a ser atualizado
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Item'
+      responses:
+        '200':
+          description: Item atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+        '404':
+          description: Item não encontrado
+
+    delete:
+      summary: Deletar um item
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID do item a ser deletado
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Item deletado com sucesso
+        '404':
+          description: Item não encontrado
+
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        name:
+          type: string
+          example: "Item Exemplo"
+        description:
+          type: string
+          example: "Descrição do item exemplo"
+        price:
+          type: number
+          format: float
+          example: 19.99
+      required:
+        - name
+        - price
