@@ -1,0 +1,46 @@
+{
+    "title": "DocHub",
+    "officialRepository": "https://duducp.github.io/dochub",
+    "items": [
+        {
+            "id": "1",
+            "type": "link",
+            "reference": "https://getbootstrap.com/docs/5.0/getting-started/introduction/",
+            "repository": "https://duducp.github.io/dochub",
+            "docTitle": "Documentação Externa",
+            "selectOptionTitle": "External"
+        },
+        {
+            "id": "2",
+            "type": "iframe",
+            "reference": "https://getbootstrap.com/docs/5.0/getting-started/introduction/",
+            "repository": "",
+            "docTitle": "Iframe",
+            "selectOptionTitle": "Iframe"
+        },
+        {
+            "id": "3",
+            "type": "openapi",
+            "reference": "docs/my-api.openapi.json",
+            "repository": "https://duducp.github.io/dochub",
+            "docTitle": "OpenAPi Json",
+            "selectOptionTitle": "OpenApi Json"
+        },
+        {
+            "id": "4",
+            "type": "openapi",
+            "reference": "docs/my-api.openapi.yaml",
+            "repository": "https://duducp.github.io/dochub",
+            "docTitle": "OpenAPi Yaml",
+            "selectOptionTitle": "OpenApi Yaml"
+        },
+        {
+            "id": "5",
+            "type": "markdown",
+            "reference": "docs/my-api.md",
+            "repository": "https://duducp.github.io/dochub",
+            "docTitle": "Markdown",
+            "selectOptionTitle": "Markdown"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocHub</title>
+    <link rel="shortcut icon" href="public/images/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.0/build/styles/default.min.css">
+    <link rel="stylesheet" href="public/css/styles.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.0/build/highlight.min.js"></script>
+  </head>
+
+  <body>
+    <header class="text-center">
+      <nav class="navbar fixed-top navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <!-- Left -->
+            <div class="d-flex">
+                <div class="btn-group">
+                    <a href="index.html" alt="DocHub" class="btn btn-dark"><i class="bi bi-house"></i></a>
+
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        Documentação
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="docSelectButton">
+                        <li>
+                            <div class="input-group ps-3 pe-3">
+                                <input type="text" id="filterInput" class="form-control" placeholder="Filtrar..." aria-label="Buscar">
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- As opções serão preenchidas pelo JavaScript -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Center -->
+            <a class="navbar-brand text-dark" id="title" href="index.html">
+                <img src="public/images/logo.png" alt="DocHub" class="header-img" height="40">
+            </a>
+
+            <!-- Right -->
+            <div class="d-flex">
+                <a href="#" target="_blank" rel="noopener noreferrer" id="headerGithubLink" class="btn btn-dark">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="content">
+
+      <!-- external doc -->
+      <div class="container d-flex justify-content-center align-items-center d-none" id="cardExternalLink" style="height: 100vh;">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Documentação externa</h5>
+            <p class="card-text">Para acessar a documentação, clique no botão abaixo para ser redirecionado.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" id="bottonExternalLink" class="btn btn-dark w-100">
+              Acessar <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- markdown doc -->
+      <div class="container mt-4 mb-4 d-none" id="cardMarkdown">
+        <div class="content-area border bg-white p-3 rounded-3" id="cardBody"></div>
+      </div>
+
+    </div>
+
+    <script src="public/js/main.js"></script>
+  </body>
+</html>
