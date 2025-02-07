@@ -30,6 +30,7 @@ Para adicionar uma nova documentação ao projeto, você deve editar o arquivo d
     - openapi-redoc: A documentação será renderizada no Redoc, seguindo o padrão OpenAPI.
     - openapi-swagger: A documentação será renderizada no Swagger, seguindo o padrão OpenAPI.
     - markdown: A documentação será renderizada a partir de um arquivo no formato markdown.
+    - html: A documentação será renderizada a partir de um arquivo no formato HTML.
 - **reference**: Link externo da documentação ou caminho do arquivo que será renderizado dentro do projeto.
 - **repository**: Link para acessar o repositório do projeto relacionado à documentação.
 - **docTitle**: Título que será exibido quando a documentação for renderizada no projeto.

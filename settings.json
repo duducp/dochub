@@ -41,6 +41,14 @@
             "repository": "https://duducp.github.io/dochub",
             "docTitle": "Markdown",
             "selectOptionTitle": "Markdown"
+        },
+        {
+            "id": "6",
+            "type": "html",
+            "reference": "docs/my-api/index.html",
+            "repository": "https://duducp.github.io/dochub",
+            "docTitle": "Página HTML estática",
+            "selectOptionTitle": "Página HTML estática"
         }
     ]
 }

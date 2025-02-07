@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Documentação da API</h1>
+    <p>Bem-vindo à documentação da API. Aqui você encontrará informações sobre como utilizar os endpoints
+        disponíveis.</p>
+
+    <h2>Autenticação</h2>
+    <p>Para acessar a API, você precisa autenticar-se utilizando um token de acesso. Inclua o token no cabeçalho de cada
+        requisição.</p>
+
+    <h3>Exemplo de Cabeçalho</h3>
+    <pre><code>Authorization: Bearer seu_token_de_acesso</code></pre>
+
+    <h2>Endpoints</h2>
+    <h3>Obter Lista de Usuários</h3>
+    <p><strong>URL:</strong> /api/usuarios</p>
+    <p><strong>Método:</strong> GET</p>
+    <p><strong>Descrição:</strong> Retorna uma lista de usuários.</p>
+
+    <h3>Criar Novo Usuário</h3>
+    <p><strong>URL:</strong> /api/usuarios</p>
+    <p><strong>Método:</strong> POST</p>
+    <p><strong>Descrição:</strong> Cria um novo usuário.</p>
+    <p><strong>Parâmetros:</strong></p>
+    <ul>
+        <li><strong>nome:</strong> Nome do usuário (string)</li>
+        <li><strong>email:</strong> Email do usuário (string)</li>
+    </ul>
+
+    <h3>Exemplo de Requisição</h3>
+    <pre><code>{
+    "nome": "João da Silva",
+    "email": "joao.silva@example.com"
+}</code></pre>
+</div>
+</body>
+</html>

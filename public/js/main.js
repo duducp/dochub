@@ -91,10 +91,21 @@ function loadPageContent(item) {
             runIframe(item.reference, item.docTitle);
         } else if (item.type === "markdown") {
             runMarkdown(item.reference);
+        } else if (item.type === "html") {
+            runHtml(item.reference);
         } else if (item.type === "link") {
             addBottonToRedirect(item.reference);
         }
     }
+}
+
+function runHtml(reference) {
+    fetch(reference)
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById("content").innerHTML = text;
+        })
+        .catch(err => console.error(err));
 }
 
 function runRedoc(reference) {
