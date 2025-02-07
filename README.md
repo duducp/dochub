@@ -13,7 +13,7 @@ Para adicionar uma nova documentação ao projeto, você deve editar o arquivo d
 ```json
 {
     "id": "1",
-    "type": "openapi",
+    "type": "openapi-redoc",
     "reference": "docs/my-api.openapi.json",
     "repository": "https://duducp.github.io/dochub",
     "docTitle": "Documentação OpenAPi Json",
@@ -21,13 +21,14 @@ Para adicionar uma nova documentação ao projeto, você deve editar o arquivo d
 }
 ```
 
-### Descrição dos Parâmetros
+### Descrição dos parâmetros
 
 - **id**: Identificador único da documentação. Pode ser qualquer valor, desde que não haja duplicatas no arquivo de settings.
 - **type**: Tipo de documentação que está sendo adicionada:
     - link: A documentação está disponível em um site externo.
     - iframe: A documentação externa será carregada diretamente na página do projeto.
-    - openapi: A documentação será renderizada a partir de um arquivo no formato json, seguindo o padrão OpenAPI.
+    - openapi-redoc: A documentação será renderizada no Redoc, seguindo o padrão OpenAPI.
+    - openapi-swagger: A documentação será renderizada no Swagger, seguindo o padrão OpenAPI.
     - markdown: A documentação será renderizada a partir de um arquivo no formato markdown.
 - **reference**: Link externo da documentação ou caminho do arquivo que será renderizado dentro do projeto.
 - **repository**: Link para acessar o repositório do projeto relacionado à documentação.

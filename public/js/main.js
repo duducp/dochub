@@ -83,8 +83,10 @@ function loadPageContent(item) {
             document.getElementById("headerGithubLink").href = item.repository;
         }
 
-        if (item.type === "openapi") {
+        if (item.type === "openapi-redoc") {
             runRedoc(item.reference);
+        } else if (item.type === "openapi-swagger") {
+            runSwagger(item.reference);
         } else if (item.type === "iframe") {
             runIframe(item.reference, item.docTitle);
         } else if (item.type === "markdown") {
@@ -109,6 +111,24 @@ function runRedoc(reference) {
         },
         document.getElementById("content")
     );
+}
+
+function runSwagger(reference) {
+    SwaggerUIBundle({
+        url: reference,
+        dom_id: '#content',
+        presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset,
+        ],
+        plugins: [
+            SwaggerUIBundle.plugins.DownloadUrl,
+        ],
+        layout: "BaseLayout", // BaseLayout
+        deepLinking: true,
+        showExtensions: true,
+        showCommonExtensions: true
+    });
 }
 
 function runIframe(reference, title) {

@@ -20,19 +20,19 @@
         },
         {
             "id": "3",
-            "type": "openapi",
+            "type": "openapi-redoc",
             "reference": "docs/my-api.openapi.json",
             "repository": "https://duducp.github.io/dochub",
             "docTitle": "OpenAPi Json",
-            "selectOptionTitle": "OpenApi Json"
+            "selectOptionTitle": "OpenApi Json - Redoc"
         },
         {
             "id": "4",
-            "type": "openapi",
+            "type": "openapi-swagger",
             "reference": "docs/my-api.openapi.yaml",
             "repository": "https://duducp.github.io/dochub",
             "docTitle": "OpenAPi Yaml",
-            "selectOptionTitle": "OpenApi Yaml"
+            "selectOptionTitle": "OpenApi Yaml - Swagger"
         },
         {
             "id": "5",
